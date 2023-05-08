@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const nome = ref('')
 const data = ref('')
@@ -13,10 +13,28 @@ const hobby = ref('')
 const linguagem = ref ('')
 const biografia = ref('')
 const mostrar = ref (false)
+
+function confirme(){
+  if(senha.value === confirma.value){
+    return true
+  } else{
+    return false
+  }
+}
+const mensagem = computed (() => {
+  if(senha.value != confirma.value){
+    return 'As senhas estão diferentes'
+  }
+  else{
+    return ''
+  }
+})
+  
+
 </script>
 
 <template>
-  <form @submit.prevent="">
+  <form @submit.prevent="mostrar = confirme()">
     
    
     <label for="text">Nome: </label>
@@ -104,6 +122,7 @@ const mostrar = ref (false)
     <br>
     
     <button @click="mostrar = !mostrar"> confirmar</button>
+    <p>{{ mensagem }}</p>
   </form>
 
     
@@ -135,14 +154,18 @@ const mostrar = ref (false)
 * {
   padding: 0;
   margin: 0;
+  
 }
 form {
-  width: 45%;
+  width: 30%;
   margin: 5em auto;
   padding: 3em;
-  border : 2px solid black;
+  border : 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
+  background-color:rgb(50, 108, 156);
+  color: white;
 }
 input {
   width: 100%;
@@ -156,7 +179,7 @@ select {
 button {
   width: 100%;
   padding: .8em;
-  color: rgb(34, 4, 4);
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
 textarea{
@@ -165,10 +188,11 @@ textarea{
 }
 
 .desaparece{
-  width: 45%;
+  width: 30%;
   margin: 5em auto;
   padding: 3em;
   border : 2px solid black;
+  background-color:rgb(50, 108, 156);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
 }
