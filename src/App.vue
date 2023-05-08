@@ -127,23 +127,23 @@ const mensagem = computed (() => {
 
     
 <div v-if="mostrar" class="desaparece">
-<p>o nome digitado é: {{ nome }}</p>
+<p>O nome digitado é: {{ nome }}</p>
 <br>
-<p>o endereço é: {{ endereco}}</p>
+<p>O endereço é: {{ endereco}}</p>
 <br>
-<p>a cidade digitada é: {{ cidade}}</p>
+<p>A cidade digitada é: {{ cidade}}</p>
 <br>
-<p>o email digitado é: {{ email}}</p>
+<p>O email digitado é: {{ email}}</p>
 <br>
-<p>o hobby digitado é: {{ hobby }}</p>
+<p>O hobby digitado é: {{ hobby }}</p>
 <br>
-<p>a linguagem de programação é: {{ linguagem}}</p>
+<p>A linguagem de programação é: {{ linguagem}}</p>
 <br>
-<p>a biografia digitada é: {{ biografia}}</p>
+<p>A biografia digitada é: {{ biografia}}</p>
 <br>
-<p>o estado escolhido é: {{estado}}</p>
+<p>O estado escolhido é: {{estado}}</p>
 <br>
-<p>a senha digitada é: {{ senha }}</p>
+<p>A senha digitada é: {{ senha }}</p>
 <br>
 <p>A confirmação digitada é:{{ confirma}}</p>
 <br>
@@ -192,9 +192,12 @@ textarea{
   margin: 5em auto;
   padding: 3em;
   border : 2px solid black;
-  background-color:rgb(50, 108, 156);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
+  background-color:rgb(50, 108, 156);
+  color: white;
+  border-radius: 10px;
+
 }
 
 </style>

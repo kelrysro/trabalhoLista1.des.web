@@ -20,5 +20,17 @@
     "eslint-plugin-vue": "^9.9.0",
     "prettier": "^2.8.4",
     "vite": "^4.1.4"
-  }
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelrysro/trabalhoLista1.des.web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelrysro/trabalhoLista1.des.web/issues"
+  },
+  "homepage": "https://github.com/kelrysro/trabalhoLista1.des.web#readme"
 }
